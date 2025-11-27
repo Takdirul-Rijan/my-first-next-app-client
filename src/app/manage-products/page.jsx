@@ -11,7 +11,9 @@ export default function ManageProductsPage() {
   const [modalImage, setModalImage] = useState(null);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/add-product");
+    const res = await axios.get(
+      "https://my-first-next-app-server.vercel.app/add-product"
+    );
 
     // console.log("Products fetched", res.data);
 
@@ -33,7 +35,9 @@ export default function ManageProductsPage() {
 
     if (!confirm.isConfirmed) return;
 
-    await axios.delete(`http://localhost:5000/products/${id}`);
+    await axios.delete(
+      `https://my-first-next-app-server.vercel.app/products/${id}`
+    );
     Swal.fire("Deleted!", "Product removed successfully.", "success");
     queryClient.invalidateQueries(["products"]);
   };

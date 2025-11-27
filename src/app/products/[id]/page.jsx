@@ -3,6 +3,7 @@
 import { useProducts } from "@/hooks/useProducts";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
+import { RiseLoader } from "react-spinners";
 
 export default function ProductDetailsPage() {
   const { id } = useParams();
@@ -14,7 +15,12 @@ export default function ProductDetailsPage() {
 
   const product = products?.find((p) => p.id === Number(id));
 
-  if (!product) return <p className="text-center mt-10">Product not found</p>;
+  if (!product)
+    return (
+      <div className="flex justify-center items-center mt-10">
+        <RiseLoader />
+      </div>
+    );
 
   return (
     <div className="container mx-auto p-6">

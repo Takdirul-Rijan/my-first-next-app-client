@@ -5,7 +5,7 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const category = searchParams.get("category") || "All";
 
-    const BACKEND_URL = "http://localhost:5000";
+    const BACKEND_URL = "https://my-first-next-app-server.vercel.app/";
 
     const response = await axios.get(`${BACKEND_URL}/allProducts`, {
       params: { category },

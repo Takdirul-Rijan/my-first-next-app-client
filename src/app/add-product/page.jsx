@@ -29,7 +29,10 @@ export default function AddProductPage() {
       data.date = new Date().toISOString().split("T")[0];
       data.userId = session.user.id;
 
-      await axios.post("http://localhost:5000/add-product", data);
+      await axios.post(
+        "https://my-first-next-app-server.vercel.app/add-product",
+        data
+      );
 
       Swal.fire({
         title: "Product Added!",
