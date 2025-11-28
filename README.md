@@ -8,8 +8,11 @@ Includes **public pages**, **protected routes**, **authentication**, **product m
 ## 🔗 Live Demo
 [https://my-first-next-app-client.vercel.app/](https://my-first-next-app-client.vercel.app/)
 
-## 🔗 GitHub Repository
+## 🔗 GitHub Repository - Client
 [https://github.com/Takdirul-Rijan/my-first-next-app-client.git](https://github.com/Takdirul-Rijan/my-first-next-app-client.git)
+
+## 🔗 GitHub Repository - Server
+[https://github.com/Takdirul-Rijan/my-first-next-app-server.git)
 
 ---
 
